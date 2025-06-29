@@ -1,7 +1,7 @@
 {
   "name": "react-jobs-app",
   "private": true,
-  "homepage": "https://shafiqul-iislam.github.io/react-js-jobs-app",
+  "homepage": "https://shafiqul-iislam.github.io/react-jobs-app",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

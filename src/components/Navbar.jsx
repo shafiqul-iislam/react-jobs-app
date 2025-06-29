@@ -11,7 +11,6 @@ const Navbar = () => {
                     />
                     <span className="text-2xl font-bold text-white">React Jobs</span>
                 </a>
-
                 {/* <!-- Desktop Menu --> */}
                 <ul className="hidden md:flex space-x-6 text-gray-700 text-sm font-medium">
                     <li className="mr-2"><a href="#" className="text-white hover:bg-indigo-700 px-2 py-1 rounded">Home</a></li>
