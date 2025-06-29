@@ -21,7 +21,6 @@ const Navbar = () => {
                     <li className="mr-2"><a href="#" className="text-white hover:bg-indigo-700 px-2 py-1 rounded">Contact</a></li>
                 </ul>
 
-
                 {/* <!-- Hamburger --> */}
                 <button id="menu-btn" className="md:hidden focus:outline-none">
                     <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
