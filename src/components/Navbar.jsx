@@ -4,7 +4,6 @@ const Navbar = () => {
     return (
         <nav className="bg-indigo-500 shadow-md fixed w-full z-10">
             <div className="max-w-7xl mx-auto px-10 py-3 flex justify-between items-center">
-
                 <a href="#" className="flex items-center space-x-2">
                     <img
                         src="../images/logo.png"
