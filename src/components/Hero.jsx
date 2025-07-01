@@ -1,14 +1,15 @@
 import React from "react";
 
-const Hero = () => {
+// title props with default value and subtitle props with default value
+const Hero = ({ title = "React Dev", subtitle = "Build fast, scalable, and interactive web apps using React." }) => {
     return (
         <section className="bg-indigo-500 py-20 px-6 text-center">
             <div className="max-w-3xl mx-auto">
                 <h1 className="text-3xl md:text-4xl font-extrabold text-white py-6">
-                    Become a React Dev
+                    {title}
                 </h1>
                 <p className="text-white text-lg md:text-xl mb-8">
-                    Kickstart your journey with modern tools and frameworks. Build fast, scalable, and interactive web apps using React.
+                    {subtitle}
                 </p>
                 <a
                     href="#"

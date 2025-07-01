@@ -1,14 +1,16 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import RoleCards from './components/RoleCards';
+import HomeCards from './components/HomeCards';
+import JobListing from './components/JobListing';
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Hero />
-      <RoleCards />
+      <Hero title="Become a React Dev" subtitle="Kickstart your journey with modern tools and frameworks. Build fast, scalable, and interactive web apps using React." />
+      <HomeCards />
+      <JobListing />
     </>
   )
 }

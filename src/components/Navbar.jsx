@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Logo from '../assets/images/logo.png';
 
 const Navbar = () => {
     return (
@@ -6,7 +7,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-10 py-3 flex justify-between items-center">
                 <a href="#" className="flex items-center space-x-2">
                     <img
-                        src="../images/logo.png"
+                        src={Logo}
                         className="h-10 w-auto"
                     />
                     <span className="text-2xl font-bold text-white">React Jobs</span>
