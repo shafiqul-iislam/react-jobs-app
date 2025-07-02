@@ -4,21 +4,12 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/react-jobs-app/',
   plugins: [
     react(),
     tailwindcss()
   ],
   server: {
-    post: 3000
-  },
-  theme: {
-    extend: {
-      fontFamily: {
-        'sans': ['Roboto', 'sans-serif']
-      },
-      gridTemplateColumns: {
-        '70/30': '70% 28%'
-      }
-    }
-  }
+    port: 3000
+  } 
 })

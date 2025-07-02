@@ -32,10 +32,7 @@ const JobListing = () => {
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {jobs.map((job) => (
-                        <div
-                            key={job.id}
-                            className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
-                        >
+                        <div key={job.id} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">
                                 {job.title}
                             </h3>
