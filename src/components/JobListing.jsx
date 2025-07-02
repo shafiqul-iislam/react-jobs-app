@@ -36,6 +36,7 @@ const JobListing = () => {
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">
                                 {job.title}
                             </h3>
+                            
                             <p className="text-gray-600 mb-1">{job.company}</p>
                             <p className="text-sm text-gray-500 mb-4">{job.location}</p>
                             <span className="inline-block bg-teal-100 text-teal-700 text-xs font-medium px-3 py-1 rounded-full mb-4">
