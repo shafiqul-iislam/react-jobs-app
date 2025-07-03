@@ -2,28 +2,8 @@ import React from 'react';
 import jobs from '../jobs.json';
 import JobListing from '../components/JobListing';
 
-//     {
-//         id: 1,
-//         title: 'Frontend Developer',
-//         company: 'Techify',
-//         location: 'Remote',
-//         type: 'Full-time',
-//     },
-//     {
-//         id: 2,
-//         title: 'Backend Developer',
-//         company: 'CloudCore',
-//         location: 'Dhaka, Bangladesh',
-//         type: 'Part-time',
-//     },
-//     {
-//         id: 3,
-//         title: 'React Native Engineer',
-//         company: 'AppSquad',
-//         location: 'Remote',
-//         type: 'Contract',
-//     },
-// ];
+const recentJobs = jobs.slice(0, 3);
+
 
 const JobListings = () => {
     return (
@@ -32,10 +12,15 @@ const JobListings = () => {
                 <h2 className="text-3xl font-bold mb-8 text-center">Job Listings</h2>
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {jobs.map((job) => (
+                    {recentJobs.map((job) => (
                         <JobListing key={job.id} job={job} />
                     ))}
                 </div>
+
+            </div>
+
+            <div className="flex justify-center mt-8">
+                <a href="#" className="inline-block bg-black text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-500 hover:text-white transition">View All Jobs</a>
             </div>
         </section>
     )

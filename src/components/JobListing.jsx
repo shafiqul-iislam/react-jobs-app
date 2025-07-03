@@ -1,6 +1,14 @@
-import React from 'react'
+import { useState } from 'react';
 
 const JobListing = ({ job }) => {
+
+    const [showFullDescription, setFullDescription] = useState(false);
+    let description = job.description;
+
+    if (!showFullDescription) {// if description is full, show less
+        description = description.substring(0, 90) + '...';
+    }
+
     return (
         <div key={job.id} className="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
             <span className="inline-block bg-indigo-100 text-indigo-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
@@ -10,7 +18,10 @@ const JobListing = ({ job }) => {
                 {job.title}
             </h3>
 
-            <p className="text-gray-600 mb-4">{job.description}</p>
+            <p className="text-gray-600">{description}</p>
+
+            <button onClick={() => setFullDescription((prevStatus) => !prevStatus)} className='text-sm text-indigo-500 hover:text-indigo-600 mb-4'>{showFullDescription ? 'Less' : 'More'}</button>
+
             <p className="text-indigo-500 mb-4">{job.salary}</p>
 
             <div className="border border-gray-200 mb-4"></div>
