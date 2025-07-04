@@ -1,6 +1,8 @@
 import React from 'react';
 import jobs from '../jobs.json';
 import JobListing from '../components/JobListing';
+import AllJobsPage from '../pages/AllJobsPage';
+import { Link } from 'react-router-dom';
 
 const recentJobs = jobs.slice(0, 3);
 
@@ -20,7 +22,7 @@ const JobListings = () => {
             </div>
 
             <div className="flex justify-center mt-8">
-                <a href="#" className="inline-block bg-black text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-500 hover:text-white transition">View All Jobs</a>
+                <Link to="/jobs" className="inline-block bg-black text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-500 hover:text-white transition">View All Jobs</Link>
             </div>
         </section>
     )

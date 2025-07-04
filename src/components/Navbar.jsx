@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../assets/images/logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -14,9 +15,9 @@ const Navbar = () => {
                 </a>
                 {/* <!-- Desktop Menu --> */}
                 <ul className="hidden md:flex space-x-6 text-gray-700 text-sm font-medium">
-                    <li className="mr-2"><a href="#" className="text-white hover:bg-indigo-700 px-2 py-1 rounded">Home</a></li>
+                    <li className="mr-2"><Link to="/" className="text-white hover:bg-indigo-700 px-2 py-1 rounded">Home</Link></li>
                     <li className="mr-2"><a href="#" className="text-white hover:bg-indigo-700 px-2 py-1 rounded">About</a></li>
-                    <li className="mr-2"><a href="#" className="text-white hover:bg-indigo-700 px-2 py-1 rounded">Services</a></li>
+                    <li className="mr-2"><Link to="/jobs" className="text-white hover:bg-indigo-700 px-2 py-1 rounded">Jobs</Link></li>
                     <li className="mr-2"><a href="#" className="text-white hover:bg-indigo-700 px-2 py-1 rounded">Contact</a></li>
                 </ul>
                 {/* <!-- Hamburger --> */}
