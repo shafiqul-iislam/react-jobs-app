@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const JobListing = ({ job }) => {
 
@@ -32,12 +33,12 @@ const JobListing = ({ job }) => {
             </div>
 
             <div>
-                <a
-                    href={`job/${job.id}`}
+                <Link
+                    to={`job/${job.id}`}
                     className="inline-block bg-indigo-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-black hover:text-white transition w-full text-center"
                 >
                     Read More
-                </a>
+                </Link>
             </div>
         </div>
     )
