@@ -24,22 +24,22 @@ const Navbar = () => {
                     <li className="mr-2"><NavLink to="add-job" className={LinkClass}>Add Job</NavLink></li>
                 </ul>
                 {/* <!-- Hamburger --> */}
-                <button id="menu-btn" className="md:hidden focus:outline-none">
+                {/* <button id="menu-btn" className="md:hidden focus:outline-none">
                     <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
-                </button>
+                </button> */}
             </div>
 
             {/* <!-- Mobile Menu --> */}
-            <div id="mobile-menu" className="md:hidden hidden px-4 pb-4 bg-white shadow-md">
+            {/* <div id="mobile-menu" className="md:hidden hidden px-4 pb-4 bg-white shadow-md">
                 <ul class="space-y-3 text-gray-700 text-sm font-medium">
                     <li className="mr-2"><NavLink to="/" className="text-white hover:bg-indigo-700 px-2 py-1 rounded">Home</NavLink></li>
                     <li className="mr-2"><NavLink to="/jobs" className="text-white hover:bg-indigo-700 px-2 py-1 rounded">Jobs</NavLink></li>
                     <li className="mr-2"><NavLink to="add-job" className="text-white hover:bg-indigo-700 px-2 py-1 rounded">Add Job</NavLink></li>
                 </ul>
-            </div>
+            </div> */}
         </nav>
     )
 }
