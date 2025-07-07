@@ -1,5 +1,5 @@
 // import { useEffect, useState } from "react";
-import { useParams, useLoaderData } from "react-router-dom";
+import { useParams, useLoaderData, Link } from "react-router-dom";
 
 const JobPage = () => {
     const { id } = useParams();
@@ -21,24 +21,40 @@ const JobPage = () => {
     // }, []);
 
     return (
-        <div className="max-w-4xl mx-auto px-4 py-10">
-            <div className="bg-white shadow-lg rounded-lg p-8">
-                <h1 className="text-3xl font-bold mb-2">{job.title}</h1>
-                <p className="text-gray-600 mb-4">
-                    {job.company} · {job.location} · <span className="font-medium">{job.type}</span>
-                </p>
-                <p className="text-green-600 font-semibold mb-4">{job.salary}</p>
+        <div>
+            <div className="max-w-4xl mx-auto px-4 py-20">
+            <a href="/jobs" className="bg-gray-300 text-indigo-500 px-4 py-2 rounded hover:bg-gray-400 transition">Back</a>
 
-                <div className="mb-6">
-                    <h2 className="text-xl font-semibold mb-2">Job Description</h2>
-                    <p className="text-gray-700">{job.description}</p>
-                </div>
-                <a
-                    href="#"
-                    className="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+                <h1 className="text-3xl font-bold mb-4 mt-5">{job.title}</h1>
+                <p className="text-gray-600 mb-2">{job.type}</p>
+                <p className="text-gray-600 mb-2">{job.description}</p>
+                <p className="text-indigo-500 mb-2">{job.salary}</p>
+                <p className="text-gray-600 mb-4">{job.location}</p>
+
+                <h2 className="text-1xl font-bold mb-2">Company</h2>
+                <p className="text-gray-600 mb-4">{job.company.name}</p>
+                <p className="text-gray-600 mb-4">{job.company.description}</p>
+                <p className="text-gray-600 mb-4">{job.company.contactEmail}, {job.company.contactPhone}</p>
+
+                <Link
+                    to="/apply"
+                    className="inline-block bg-indigo-600 text-white px-6 py-2 rounded hover:bg-black transition"
                 >
                     Apply Now
-                </a>
+                </Link>
+
+                <div className="py-10">
+                    <h2 className="text-1xl font-bold mb-2">Manage Jobs</h2>
+                    <Link
+                        to={`/edit-job/${job.id}`}
+                        className="inline-block bg-indigo-600 text-white px-6 py-2 rounded hover:bg-black transition mr-3"
+                    >
+                        Edit Job
+                    </Link>
+                    <Link>
+                        <button className="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-black transition">Delete Job</button>
+                    </Link>
+                </div>
             </div>
         </div>
     )
