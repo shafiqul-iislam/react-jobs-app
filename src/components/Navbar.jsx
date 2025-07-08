@@ -21,7 +21,7 @@ const Navbar = () => {
                 <ul className="hidden md:flex space-x-6 text-gray-700 text-sm font-medium">
                     <li className="mr-2"><NavLink to="/" className={LinkClass}>Home</NavLink></li>
                     <li className="mr-2"><NavLink to="/jobs" className={LinkClass}>Jobs</NavLink></li>
-                    <li className="mr-2"><NavLink to="add-job" className={LinkClass}>Add Job</NavLink></li>
+                    <li className="mr-2"><NavLink to="/add-job" className={LinkClass}>Add Job</NavLink></li>
                 </ul>
                 {/* <!-- Hamburger --> */}
                 {/* <button id="menu-btn" className="md:hidden focus:outline-none">

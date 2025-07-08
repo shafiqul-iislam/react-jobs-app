@@ -23,7 +23,7 @@ const JobPage = () => {
     return (
         <div>
             <div className="max-w-4xl mx-auto px-4 py-20">
-            <a href="/jobs" className="bg-gray-300 text-indigo-500 px-4 py-2 rounded hover:bg-gray-400 transition">Back</a>
+                <a href="/jobs" className="bg-gray-300 text-indigo-500 px-4 py-2 rounded hover:bg-gray-400 transition">Go Back</a>
 
                 <h1 className="text-3xl font-bold mb-4 mt-5">{job.title}</h1>
                 <p className="text-gray-600 mb-2">{job.type}</p>
@@ -38,7 +38,7 @@ const JobPage = () => {
 
                 <Link
                     to="/apply"
-                    className="inline-block bg-indigo-600 text-white px-6 py-2 rounded hover:bg-black transition"
+                    className="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-black transition"
                 >
                     Apply Now
                 </Link>
@@ -47,13 +47,13 @@ const JobPage = () => {
                     <h2 className="text-1xl font-bold mb-2">Manage Jobs</h2>
                     <Link
                         to={`/edit-job/${job.id}`}
-                        className="inline-block bg-indigo-600 text-white px-6 py-2 rounded hover:bg-black transition mr-3"
+                        className="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-black transition mr-3"
                     >
                         Edit Job
                     </Link>
-                    <Link>
-                        <button className="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-black transition">Delete Job</button>
-                    </Link>
+
+                    <button className="inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-black transition">Delete Job</button>
+
                 </div>
             </div>
         </div>
