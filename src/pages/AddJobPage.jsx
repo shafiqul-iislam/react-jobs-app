@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const AddJobPage = () => {
+const AddJobPage = ({ addJobSubmit }) => {
 
     const [job, setJob] = useState({
         title: '',
@@ -13,11 +14,26 @@ const AddJobPage = () => {
         description: '',
     });
 
+    const navigate = useNavigate();
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Job submitted:', job);
-        // TODO: Submit to backend or API
-    };
+
+        const newJob = {
+            title: job.title,
+            company: job.company,
+            location: job.location,
+            type: job.type,
+            salary: job.salary,
+            email: job.email,
+            phone: job.phone,
+            description: job.description,
+        };
+
+        addJobSubmit(newJob);
+
+        return navigate('/jobs');
+    }
 
     return (
         <section className="bg-indigo-50 py-20 px-4">
@@ -33,7 +49,6 @@ const AddJobPage = () => {
                             value={job.title}
                             onChange={(e) => setJob({ ...job, title: e.target.value })}
                             className="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required
                         />
                     </div>
 
@@ -45,7 +60,6 @@ const AddJobPage = () => {
                             value={job.company}
                             onChange={(e) => setJob({ ...job, company: e.target.value })}
                             className="w-full border rounded p-2"
-                            required
                         />
                     </div>
 
@@ -58,7 +72,6 @@ const AddJobPage = () => {
                                 value={job.location}
                                 onChange={(e) => setJob({ ...job, location: e.target.value })}
                                 className="w-full border rounded p-2"
-                                required
                             />
                         </div>
 
@@ -69,7 +82,6 @@ const AddJobPage = () => {
                                 value={job.type}
                                 onChange={(e) => setJob({ ...job, type: e.target.value })}
                                 className="w-full border rounded p-2"
-                                required
                             >
                                 <option value="">Select</option>
                                 <option value="Full-Time">Full-Time</option>
@@ -100,7 +112,6 @@ const AddJobPage = () => {
                                 value={job.email}
                                 onChange={(e) => setJob({ ...job, email: e.target.value })}
                                 className="w-full border rounded p-2"
-                                required
                             />
                         </div>
 
@@ -112,7 +123,6 @@ const AddJobPage = () => {
                                 value={job.phone}
                                 onChange={(e) => setJob({ ...job, phone: e.target.value })}
                                 className="w-full border rounded p-2"
-                                required
                             />
                         </div>
                     </div>
@@ -124,7 +134,6 @@ const AddJobPage = () => {
                             value={job.description}
                             onChange={(e) => setJob({ ...job, description: e.target.value })}
                             className="w-full border rounded p-2 h-15"
-                            required
                         />
                     </div>
 
